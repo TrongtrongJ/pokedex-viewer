@@ -4,7 +4,7 @@ Name: Trongtrong Vanatharnkul
 
 # Pokedex Viewer Application
 
-A Pokedex Viewer Application built with Next.js, TypeScript.
+A Pokedex Viewer Application built with React (Next.js), TypeScript.
 
 ## Features
 
@@ -15,7 +15,7 @@ A Pokedex Viewer Application built with Next.js, TypeScript.
 
 ## Tech Stack
 
-- **Frontend Framework**: Next.js with TypeScript
+- **Frontend Framework**: React (Next.js) with TypeScript
 - **State Management**: Redux Toolkit
 
 ## Getting Started
@@ -70,8 +70,8 @@ A Pokedex Viewer Application built with Next.js, TypeScript.
 - Modern Redux pattern like slice and createAsyncThunk.
 
 # Bugs and features I haven't completed
-- Make niche pokemon sprite (like regional form) displayed properly.
-- No auto-redirect if the user navigates to an unavailable page.
-- Pagination query, pokeapi don't support paginated search by name.
-- Not pixel perfect yet, but pokemon tile should be responsive.
-- Type Error from actions created with Redux 'createAsyncThunk'.
+- Make niche pokemon sprite (like regional form) display properly.
+- No auto-redirect if the user navigates to a non-existing page.
+- Paginated query, pokeapi don't support paginated search by name.
+- Not yet pixel perfect, but pokemon tiles should display responsively as a bonus.
+- Some type error from actions created with Redux createAsyncThunk.
