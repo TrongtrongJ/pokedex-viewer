@@ -54,7 +54,7 @@ A Pokedex Viewer Application built with React (Next.js), TypeScript.
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 # Details on AI Tools Used
-- Claude to just general idea of how modern Redux had evolved and some component styling, these are the exact prompts:
+- Claude to just get general ideas of how modern Redux had evolved, and some component styling, these are the exact prompts I gave:
 
 > Could you help write example of a modern Redux pattern ? 
 > Had it changed much in recent years ?
@@ -62,12 +62,12 @@ A Pokedex Viewer Application built with React (Next.js), TypeScript.
 > Could you help write a React Boundery template, just styling, 
 > I would like to write component logic by myself.
 
-- I strictly use AI for examples only, <em>I have coded > 95% of this project manually</em>.
+- I strictly used AI for examples only, <em>I have coded > 95% of this project manually</em>.
 
 # Additional submissions
 - My typescript utility examples of how I am generally throurough about type-safety.
 - Pure scss no library.
-- Modern Redux pattern like slice and createAsyncThunk.
+- Modern Redux pattern like createSlice and createAsyncThunk.
 
 # Bugs and features I haven't completed
 - Make niche pokemon sprite (like regional form) display properly.
