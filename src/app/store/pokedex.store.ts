@@ -46,14 +46,6 @@ export const pokedexSlice = createSlice({
         pokemonIndexTo
       );
     },
-    resyncPageNavAvailability: (state) => {
-      // resync page nav buttons,
-      // disable a corresponding button if there's no next/prev page
-      const isNextPageAvailable = state.totalPages - 1 > state.currentPageIndex;
-      state.isNextPageEnabled = isNextPageAvailable;
-      const isPrevPageAvailable = state.currentPageIndex > 0;
-      state.isPreviousPageEnabled = isPrevPageAvailable;
-    },
     navigateToNextPage: (state) => {
       state.currentPageIndex += 1;
     },
@@ -86,8 +78,6 @@ export const pokedexSlice = createSlice({
             0,
             state.pokemonsPerPage
           );
-          state.isNextPageEnabled = true;
-          state.isPreviousPageEnabled = false;
         }
       })
       .addCase(fetchPokedex.rejected, (state, action) => {
@@ -125,7 +115,6 @@ export const {
   setPokemonListByPageIndex,
   navigateToNextPage,
   navigateToPreviousPage,
-  resyncPageNavAvailability,
 } = pokedexSlice.actions;
 
 // Since Pokeapi doesn't support name search, and the data is relatively light,
