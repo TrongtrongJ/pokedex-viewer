@@ -2,31 +2,36 @@
 import React, { useState, useEffect, useCallback, useId } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setError,
   setSortMode,
   setPokemonListByPageIndex,
   fetchPokedex,
   navigateToPreviousPage,
   navigateToNextPage,
-  resyncPageNavAvailability,
 } from "../../store/pokedex.store";
 import type { SortMode } from "../../store/pokedex.constants";
-import type { RootState } from "../../store";
+import type { RootState, AppDispatch } from "../../store";
 import "./PokedexPage.scss";
 
 import PokemonTile from "./PokemonTile";
 
 export default function PokedexPage() {
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const {
     isLoading,
     sortMode,
     currentPageIndex,
+    totalPages,
     currentPokemonList,
-    isPreviousPageEnabled,
-    isNextPageEnabled,
   } = useSelector((state: RootState) => state.pokedex);
+
+  const [isPreviousPageEnabled, setIsPreviousPageEnabled] = useState(false);
+  const [isNextPageEnabled, setIsNextPageEnabled] = useState(false);
+
+  useEffect(() => {
+    setIsNextPageEnabled(currentPageIndex < totalPages - 1 ? true : false);
+    setIsPreviousPageEnabled(currentPageIndex > 0 ? true : false);
+  }, [currentPageIndex, totalPages]);
 
   const sortByNameInputId = useId();
   const sortByIdInputId = useId();
@@ -49,7 +54,6 @@ export default function PokedexPage() {
 
   useEffect(() => {
     dispatch(setPokemonListByPageIndex(currentPageIndex + 1));
-    dispatch(resyncPageNavAvailability());
   }, [currentPageIndex, sortMode]);
 
   return (

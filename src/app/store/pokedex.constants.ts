@@ -22,8 +22,6 @@ export interface PokedexState {
   totalPages: number;
   pokemonMetadata: Pokemon[];
   currentPokemonList: Pokemon[];
-  isNextPageEnabled: boolean;
-  isPreviousPageEnabled: boolean;
 }
 
 export const initialPokedexState: Readonly<PokedexState> = {
@@ -36,8 +34,6 @@ export const initialPokedexState: Readonly<PokedexState> = {
   totalPages: 0,
   pokemonMetadata: [],
   currentPokemonList: [],
-  isNextPageEnabled: false,
-  isPreviousPageEnabled: false,
 };
 
 export interface PokedexResItem {

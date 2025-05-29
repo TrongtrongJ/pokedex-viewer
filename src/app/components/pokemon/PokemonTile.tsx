@@ -2,13 +2,12 @@ import React, { useState, useEffect, useCallback, useId } from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setError,
   setSortMode,
   setPokemonListByPageIndex,
   fetchPokedex,
   fetchPokemonDataById,
 } from "../../store/pokedex.store";
-import type { RootState } from "../../store";
+import type { RootState, AppDispatch } from "../../store";
 import "./PokemonTile.scss";
 
 interface IPokemonTileProps {
@@ -23,7 +22,7 @@ export default function PokemonTile({
   name,
   isLoaded,
 }: IPokemonTileProps) {
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   // Check if a specific pokemon data is loaded
   // So we won't need to refetch its sprite data
