@@ -1,0 +1,55 @@
+.pokemon-tile-card {
+  display: flex;
+  flex-direction: row;
+  
+  background-color: #FDFDFD;
+  border: 1px solid #E3E1E5;
+  height: 6rem;
+  min-width: 17rem;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  font-family: var('--font-encode-sans');
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  .pokemon-sprite-wrapper {
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pokemon-sprite-image {
+      z-index: 10;
+      margin: auto;
+    }
+    .sprite-background {
+      position: absolute;
+      top: 18%;
+      left: 10%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0, 0.07);
+    }
+  }
+  .pokemon-name-container {
+    vertical-align: middle;
+    margin: auto 0;
+    padding-left: 1rem;
+    text-transform: capitalize;
+  }
+
+  @media only screen and (min-width: 1064px) {
+    min-width: 18rem;
+    margin: 0 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  @media (min-width:400px) and (max-width:900px) {
+    min-width: 17rem;
+    margin: 0 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+}

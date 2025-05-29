@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Info
+
+Name: Trongtrong Vanatharnkul
+
+# Pokedex Viewer Application
+
+A Pokedex Viewer Application built with Next.js, TypeScript.
+
+## Features
+
+- 📖 Pokedex viewer
+- 🔍 Support sorting by both pokemonId and name
+- 🐉 Display pokemon name and sprite
+- 💻 Responsive design (except for very small screen size)
+
+## Tech Stack
+
+- **Frontend Framework**: Next.js with TypeScript
+- **State Management**: Redux Toolkit
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 20.x (or later)
+- npm 10.x (or later) or yarn or pnpm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TrongtrongJ/pokedex-viewer.git
+   cd pokedex-viewer
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-## Learn More
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Details on AI Tools Used
+- Claude to just general idea of how modern Redux had evolved and some component styling, these are the exact prompts:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> Could you help write example of a modern Redux pattern ? 
+> Had it changed much in recent years ?
 
-## Deploy on Vercel
+> Could you help write a React Boundery template, just styling, 
+> I would like to write component logic by myself.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- I strictly use AI for examples only, <em>I have coded > 95% of this project manually</em>.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Additional submissions
+- My typescript utility examples of how I am generally throurough about type-safety.
+- Pure scss no library.
+- Modern Redux pattern like slice and createAsyncThunk.
+
+# Bugs and features I haven't completed
+- Make niche pokemon sprite (like regional form) displayed properly.
+- No auto-redirect if the user navigates to an unavailable page.
+- Pagination query, pokeapi don't support paginated search by name.
+- Not pixel perfect yet, but pokemon tile should be responsive.
+- Type Error from actions created with Redux 'createAsyncThunk'.
